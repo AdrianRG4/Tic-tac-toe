@@ -16,18 +16,17 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+.regla_contenedor {
+  color: blue;
+  font-family: cursive;
+  padding: 5%;
+}
+.regla_titulo {
+  color: rgb(255, 0, 0);
+  font-size: 32px;
 }
