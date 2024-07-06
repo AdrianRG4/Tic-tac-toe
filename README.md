@@ -42,3 +42,9 @@ git add .
 git commit -m "cualquier mensaje"
 git push origin main
 ```
+
+## Prender servidor
+
+```
+npm run dev
+```

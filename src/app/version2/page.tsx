@@ -4,23 +4,27 @@ import { useState } from "react";
 
 const VersionTwo = () => {
   const [mark, setMark] = useState("O");
-
+  const [click, setClick] = useState("");
   const [state1, setState1] = useState("");
+  const changeClick = () => {
+    setClick(click);
+    if (click == "true") setClick("disabled");
+  };
   const changeState1 = () => {
     setState1(mark);
     if (mark == "O") {
-      setMark("X");
+      setMark("next.vsg");
     } else {
-      setMark("O");
+      setMark("");
     }
   };
   const [state2, setState2] = useState("");
   const changeState2 = () => {
     setState2(mark);
     if (mark == "O") {
-      setMark("X");
+      setMark("next.svg");
     } else {
-      setMark("O");
+      setMark("vercel.vsg");
     }
   };
   const [state3, setState3] = useState("");
@@ -88,8 +92,8 @@ const VersionTwo = () => {
   };
 
   return (
-    <body className="bg-cyan-800">
-      <div className="flex-row place-content-center grid">
+    <body className="bg-cyan-700">
+      <div className="flex-row place-content-center grid bg-slate-500 w-full h-screen">
         <div>
           <button
             onClick={changeState1}
@@ -116,7 +120,7 @@ const VersionTwo = () => {
           </button>
           <button
             onClick={changeState5}
-            className="h-10 w-10 border-r-8 border-b-8"
+            className="h-10 w-10 border-r-8 border-b-8 "
           >
             {state5}
           </button>
