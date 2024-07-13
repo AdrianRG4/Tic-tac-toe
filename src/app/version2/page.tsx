@@ -21,9 +21,42 @@ const VersionTwo = () => {
   const [mark, setMark] = useState("O");
   const [state1, setState1] = useState("");
   const verificarGanador = () => {
+    //horizontal
     if (state1 === "O" && state2 === "O" && state3 === "O") {
-      console.log("GANO JUGADOR OOOOOOO");
-    }
+      return("GANO JUGADOR O");
+    } else if  (state1 === "X" && state2 === "X" && state3 === "X"){
+      return("GANO JUGADOR X")
+    } else if (state4 === "O" && state5 === "O" && state6 === "O") {
+      return("GANO JUGADOR O")
+    } else if  (state4 === "X" && state5 === "X" && state6 === "X"){
+      return("GANO JUGADOR X") 
+    } else if  (state7 === "O" && state8 === "O" && state9 === "O"){
+      return("GANO JUGADOR O") 
+    } else if  (state7 === "X" && state8 === "X" && state9 === "X"){
+      return("GANO JUGADOR X")
+    //vertical
+    } else if  (state1 === "X" && state4 === "X" && state7 === "X"){
+      return("GANO JUGADOR X")
+    } else if (state1 === "O" && state4 === "O" && state7 === "O") {
+      return("GANO JUGADOR O")
+    } else if  (state2 === "X" && state5 === "X" && state8 === "X"){
+      return("GANO JUGADOR X") 
+    } else if  (state2 === "O" && state5 === "O" && state8 === "O"){
+      return("GANO JUGADOR O") 
+    } else if  (state3 === "X" && state6 === "X" && state9 === "X"){
+      return("GANO JUGADOR X")
+    } else if  (state3 === "O" && state6 === "O" && state9 === "O"){
+      return("GANO JUGADOR O")
+    //diagonal
+    } else if  (state3 === "X" && state5 === "X" && state7 === "X"){
+      return("GANO JUGADOR X") 
+    } else if  (state3 === "O" && state5 === "O" && state7 === "O"){
+      return("GANO JUGADOR O")
+    } else if  (state1 === "X" && state5 === "X" && state9 === "X"){
+      return("GANO JUGADOR X") 
+    } else if  (state1 === "O" && state5 === "O" && state9 === "O"){
+      return("GANO JUGADOR O") 
+  }
   };
 
   const changeState1 = (event) => {
@@ -121,6 +154,8 @@ const VersionTwo = () => {
     verificarGanador();
   }, [state1, state2, state3, state4, state5, state6, state7, state8, state9]);
 
+  const quienGana = verificarGanador();
+
   return (
     <body className="bg-cyan-700">
       <div className="flex-row place-content-center grid bg-slate-500 w-full h-screen gap-y-2">
@@ -139,6 +174,10 @@ const VersionTwo = () => {
           <Button state={state8} changeState={changeState8} />
           <Button state={state9} changeState={changeState9} />
         </div>
+        
+      </div>
+      <div className="bg-emerald-800 p-2 self-center">
+          {quienGana}
       </div>
     </body>
   );
