@@ -48,3 +48,26 @@ git push origin main
 ```
 npm run dev
 ```
+
+## Tipo de Datos
+
+```
+const bookName = "La Odisea"
+    "" = string
+    const define la variable
+    bookName es el nombre de la variable
+const bookYear = 90
+    90 = number
+const bookOdiseaIsGood = true
+    true = boolean
+const books = [bookName, "La Iliada", "Paco Yunque"]
+                   0          1              2
+    books[0] = "La Odisea"
+const person = {
+    name : "Edwin"
+    age : 35,
+    city : "Trujillo",
+}
+person.name = "Edwin"
+person(age) = 35
+```
