@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 const Juego = () => {
   const [counter, setCounter] = useState(0);
   const incrementar = () => {
